@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img4"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtHeaderDailyExpEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Enter Daily Expenses"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/txtUserNameDailyExpEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="UserName/Area Code"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20dp"
+            android:layout_gravity="right"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/l3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgDailyExpDateEntry"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@id/dtpDailyExpDateEntry"
+                android:src="@drawable/calender"
+                 android:textColor="#0F0F0F" />
+
+            <EditText
+                android:id="@+id/dtpDailyExpDateEntry"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:editable="false"
+                android:textColor="#0F0F0F"
+                android:hint="Select Expenses Date..."
+                android:textSize="15sp"
+                android:onClick="onClickGetExpDate"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edtxtDailyExpVouNo"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:editable="false"
+            android:textColor="#0F0F0F"
+            android:hint="Daily Expenses Voucher No..."
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoListExpensesType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Choose Expenses Type..."
+            android:layout_marginTop="5dp"
+            android:popupBackground="@color/colorPrimary"
+            android:textColor="#2A2AFF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtExpensesAmount"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:textColor="#0F0F0F"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter Expenses Amount"
+            android:inputType="numberDecimal"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtExpensesRemark"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:textColor="#0F0F0F"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter Expenses Remark"
+            android:inputType="text|textMultiLine"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSaveExpData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:text="Save Expenses Amount..."
+            android:onClick="onClickSaveExpenses"
+            android:textColor="#0F0F0F" />
+        <Button
+            android:id="@+id/btnShowExpData"
+            android:layout_width="match_parent"
+            android:background="@drawable/editstyle"
+            android:text="Show Daily Expenses Data..."
+            android:layout_marginTop="5dp"
+            android:onClick="onClickShowExpData"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:id="@+id/lvExpensesData"/>
+    </LinearLayout>
+
+</LinearLayout>

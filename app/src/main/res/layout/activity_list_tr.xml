@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/list_tr"
+    android:scrollbars="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewListTr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="List TR "
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tvuserDemand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewListTr"
+            android:layout_alignParentRight="true"
+            android:text="UserName/Area Code"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textViewTrDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvuserDemand"
+            android:layout_marginTop="5dp"
+            android:text="Select Hatch Date:"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dtpTrDate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textViewTrDate"
+            android:editable="false"
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnGeTrdata"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/dtpTrDate"
+            android:layout_alignParentRight="true"
+            android:onClick="GetTrDate"
+            android:src="@drawable/calender" />
+
+        <Button
+            android:id="@+id/btnShowTrData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dtpTrDate"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/editstyle"
+            android:hint="Image Upload..."
+            android:onClick="ShowTrdata"
+            android:text="Show TR DATA" />
+
+
+        <ListView
+            android:id="@+id/listtr"
+            android:layout_width="fill_parent"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/btnShowTrData"
+            android:scrollbars="vertical"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</LinearLayout>

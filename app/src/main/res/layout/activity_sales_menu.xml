@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud"
+    android:padding="15dp"
+    tools:context=".SalesMenuActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/btntr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAreaCode"
+            android:layout_alignRight="@+id/tvAreaCode"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/editstyle"
+            android:hint="TR Entry"
+            android:onClick="TrForm"
+
+            android:text="TR Entry" />
+
+        <TextView
+            android:id="@+id/tvAreaCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:paddingTop="5dp"
+            android:text="UserName/Area Code"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tvArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Menu..."
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/btnSupplyInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btntr"
+            android:layout_alignLeft="@+id/btntr"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:hint="Supply Entry"
+            android:onClick="SupplyForm"
+            android:text="Supply Entry" />
+
+        <Button
+            android:id="@+id/btnDemandInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSupplyInfo"
+            android:layout_alignLeft="@+id/btnSupplyInfo"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:hint="Chicks Demand Entry"
+            android:onClick="Chicksdemand"
+            android:text="Chicks Demand Entry"/>
+
+        <Button
+            android:id="@+id/btnBankDeposite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnDemandInfo"
+            android:layout_alignLeft="@+id/btnSupplyInfo"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:onClick="Bankdeposite"
+            android:text="Bank Deposit Entry" />
+
+
+        <Button
+            android:id="@+id/btnImgUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnSupplyInfo"
+            android:layout_below="@+id/btnBankDeposite"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:text="Image Upload..."
+            android:onClick="ImageUpload"
+            android:hint="Image Upload..." />
+
+        <Button
+            android:id="@+id/btnDisapalyTr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnImgUpload"
+            android:layout_alignLeft="@+id/btnImgUpload"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:hint="Display TR Data.."
+            android:onClick="DisplayTr"
+            android:text="Display TR Data.." />
+
+
+        <Button
+            android:id="@+id/btnDisapalydm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnDisapalyTr"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:hint="Display Supply Data.."
+            android:onClick="Displaydata"
+            android:text="Display Supply Data.." />
+
+        <Button
+            android:id="@+id/btnDisapalyDemand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnDisapalydm"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:hint="Display Chicks Demand Data.."
+            android:onClick="DisplayDemand"
+            android:text="Display Chicks Demand Data.." />
+
+        <Button
+            android:id="@+id/btnDisapalyDeposite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnDisapalyDemand"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:onClick="onClickhoebankdepositedata"
+            android:text="Display Bank Deposite Data.." />
+
+        <Button
+            android:id="@+id/btnDailyExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnDisapalyDeposite"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:onClick="onClickActivityDailyExpenses"
+            android:text="Enter Daily Expenses.."
+            android:hint="Enter Daily Expenses.." />
+
+        <Button
+            android:id="@+id/btnStartTrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnDailyExpenses"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:hint="Start Trip.."
+            android:onClick="StartTrip"
+            android:text="Start Trip.." />
+
+
+    </RelativeLayout>
+</ScrollView>

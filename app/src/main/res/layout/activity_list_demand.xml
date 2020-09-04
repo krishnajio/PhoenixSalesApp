@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/listdemand"
+    android:scrollbars="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textViewListdemand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="List Hatch Date Chicks Demand   "
+            android:textColor="#0F0F0F"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tvuserlistdemand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewListdemand"
+            android:layout_alignParentRight="true"
+            android:text="UserName/Area Code"
+            android:textColor="#0F0F0F"
+            android:textSize="12sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textViewdemandHatchdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewListdemand"
+            android:layout_marginTop="5dp"
+            android:text="Select Hatch Date:"
+            android:textColor="#0F0F0F"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dtpDemandHAtchdate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textViewdemandHatchdate"
+            android:editable="false"
+            android:textColor="#0F0F0F"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnGetdemandhatchdate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/dtpDemandHAtchdate"
+            android:layout_alignParentRight="true"
+            android:onClick="GetDHatchDate"
+            android:src="@drawable/calender" />
+
+        <Button
+            android:id="@+id/btnShowdemandData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dtpDemandHAtchdate"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/editstyle"
+            android:onClick="ShowDemanddata"
+            android:text="Show Chickd Demand Data" />
+
+
+        <ListView
+            android:id="@+id/list_demand"
+            android:layout_width="fill_parent"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/btnShowdemandData"
+            android:scrollbars="vertical"
+            android:layout_height="500dp" />
+
+
+
+    </RelativeLayout>
+</LinearLayout>

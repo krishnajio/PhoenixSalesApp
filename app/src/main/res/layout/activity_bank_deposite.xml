@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:background="@drawable/img13"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvState11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Enter Bank Deposit Detials"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/tvBakDepUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="UserName/Area Code"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20dp"
+                android:layout_gravity="right"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgBankdepoEntryDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignRight="@id/edtxtBankdepoEntryDate"
+            android:src="@drawable/calender"
+           android:textColor="#0F0F0F" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtxtBankdepoEntryDate"
+            android:onClick="GetBankVoudate"
+            android:hint="Select Entry Date"/>
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtxtDepoVouNo"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Bank Name"
+            android:id="@+id/autoLstBankList"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgBankdepoHAtchDate"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@id/edtxtBankdepoHatchDate"
+                android:src="@drawable/calender"
+                android:textColor="#0F0F0F" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtxtBankdepoHatchDate"
+                android:onClick="GetBankDepoHatchdate"
+                android:hint="Select Hatch Date"/>
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtxtBankdepoAmount"
+            android:onClick="GetBankDepoHatchdate"
+            android:hint="Enter Deposite Amount"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgBankdepositechDate"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@id/edtxtBankdepositehDate"
+                android:src="@drawable/calender"
+                android:textColor="#0F0F0F" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtxtBankdepositehDate"
+                android:onClick="GetBankDepoDate"
+                android:hint="Select Bank Deposite Date"/>
+        </RelativeLayout>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:id="@+id/spnPaymode"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtxtBankdocNo"
+            android:hint="Select Bank DocumentNo Date"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtxtBankdepoRemarks"
+            android:hint="Select Bank DocumentNo Date"/>
+
+        <Button
+            android:id="@+id/btnSaveBankDepo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="SaveDepositeDetials"
+            android:text="SAVE BANK DEPOSIT DETILAS" />
+
+    </LinearLayout>
+</ScrollView>

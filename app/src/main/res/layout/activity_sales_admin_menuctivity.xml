@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/demand"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="5dp"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="Menu Sales Admin..."
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvAreaCodeSalesAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="UserName/Area Code"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20dp"
+        android:layout_gravity="right"
+        android:textStyle="bold|italic" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnChickRateArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/editstyle"
+            android:hint="Chick Rate Entry Area"
+            android:onClick="ChickRateAreaEntry"
+            android:text="Chick Rate Entry Area Wise" />
+
+        <Button
+            android:id="@+id/btnChickRateState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+           android:onClick="onClickState"
+            android:text="Chick Rate Entry State Wise" />
+
+        <Button
+            android:id="@+id/btnStartTrpSalesAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:onClick="onClickStartTripSaleasAdmin"
+            android:text="Strat Trip..." />
+
+        <Button
+            android:id="@+id/btnExpenseSalesAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:onClick="onClickDailyExpenseSalesAdmin"
+            android:text="Daily Expenses Entry" />
+
+    </LinearLayout>
+</LinearLayout>

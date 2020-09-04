@@ -1,0 +1,311 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/img1"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:scrollbars="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="TR DATA"
+            android:textSize="20dp"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tv8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="4dp"
+            android:text="UserName/Area Code"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv8"
+            android:layout_marginTop="0dp"
+            android:text="Customer:"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/edtxtCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_below="@+id/textView2"
+            android:textColor="#0F0F0F"
+            android:layout_marginTop="5dp"
+            android:hint="Customer"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtCustomer"
+            android:layout_marginTop="10dp"
+            android:text="TR No:"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/edtxtTrNo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textView3"
+            android:editable="false"
+            android:hint="TR No"
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtTrNo"
+            android:layout_marginTop="10dp"
+            android:text="TR Date:"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/edtxtTrDate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textView4"
+            android:editable="false"
+            android:hint="TR Date"
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtTrDate"
+            android:layout_marginTop="10dp"
+            android:text="TR Amount:"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/edtxtTrAmount"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textView5"
+            android:editable="false"
+            android:hint="TR Amount"
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtTrAmount"
+            android:layout_marginTop="10dp"
+            android:text="Paymnet Mode:"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/edtxtpaymode"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textView6"
+            android:editable="false"
+            android:fontFamily="serif"
+            android:hint="Pay Mode"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold"
+            android:textColorHighlight="#0A0A0A"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtpaymode"
+            android:layout_marginTop="15dp"
+            android:text="Bank Detials:"
+            android:textColor="#0F0F0F"
+
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/edtxtChqNo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_above="@+id/textView7"
+            android:layout_alignParentRight="true"
+            android:editable="false"
+            android:hint="Chq No"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold"
+            android:textSize="10dp"></EditText>
+
+        <EditText
+            android:id="@+id/edtxtBAnkDet"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textView7"
+            android:editable="false"
+            android:hint="Bank Detials"
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"
+            android:textStyle="bold"></EditText>
+
+        <EditText
+            android:id="@+id/edtxtBankDatetr"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/edtxtBAnkDet"
+            android:editable="false"
+            android:hint="Bank Deposite Date..."
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"
+            android:textStyle="bold"></EditText>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtBankDatetr"
+            android:layout_marginTop="15dp"
+            android:text="Hatch Date:"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/edtxtHdate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textView8"
+            android:editable="false"
+            android:hint="Hatch Date"
+            android:textColor="#0F0F0F"
+            android:textSize="10dp"
+            android:textStyle="bold"></EditText>
+
+
+        <TextView
+            android:id="@+id/textViewpt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtHdate"
+            android:layout_marginTop="15dp"
+            android:text="Payment Type:"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+
+        <EditText
+            android:id="@+id/edtxtPayType"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textViewpt"
+            android:editable="false"
+            android:hint="Pay Type"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold"
+            android:textSize="10dp"></EditText>
+
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtPayType"
+            android:layout_marginTop="10dp"
+            android:text="Chicks Type:"
+        android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/edtxtChicksType"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textView9"
+            android:editable="false"
+            android:hint="Chicks Type"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold"
+            android:textSize="10dp"></EditText>
+
+        <EditText
+            android:id="@+id/edtxtMobNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtChicksType"
+            android:editable="false"
+            android:hint="Mobile No"
+            android:textStyle="bold"
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"></EditText>
+
+        <EditText
+            android:id="@+id/edtxtrate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/edtxtMobNo"
+            android:editable="false"
+            android:hint="Chick Rate"
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/edtxtrate"
+            android:editable="false"
+            android:hint="Remarks"
+            android:textStyle="bold"
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"/>
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/btnSave"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:onClick="Previous"
+            android:text="Previous"
+            android:textColor="#0F0F0F"></Button>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/edtxRemarks"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:onClick="SaveTr"
+            android:text="Save TR"
+            android:textColor="#0F0F0F" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@drawable/tr1"
+    android:scrollbars="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="SUPPLY INFORMATION ENTRY"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tvuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_alignParentRight="true"
+            android:text="UserName/Area Code"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textViewSupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvuser"
+            android:layout_marginTop="15dp"
+            android:text="Enter Supply Date"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dtpSuppDate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textViewSupdate"
+            android:editable="false"
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textDmNO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dtpSuppDate"
+            android:layout_marginTop="15dp"
+            android:text="Enter DmNo"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtDmNO"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_below="@+id/textDmNO"
+            android:editable="false"
+            android:hint="Enter DmNo..."
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textViewshatchdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtDmNO"
+            android:layout_marginTop="15dp"
+            android:text="Chicks Hatch Date"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dtpshatchDate"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_below="@+id/textViewshatchdate"
+            android:editable="false"
+            android:onClick="GetHdateSupply"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewCust"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dtpshatchDate"
+            android:layout_marginTop="15dp"
+            android:text="Select Customer"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoListSupply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewCust"
+            android:hint="Choose Customer"
+            android:popupBackground="@color/colorPrimary"
+            android:textColor="#2A2AFF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnGetsHatchDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/dtpshatchDate"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/calender"
+            android:textColor="#0F0F0F" />
+
+
+        <TextView
+            android:id="@+id/textchktype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/autoListSupply"
+            android:layout_marginTop="15dp"
+            android:text="Select Chicks Type"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinsChicksType"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textchktype"
+            android:layout_alignLeft="@+id/textchktype"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textChicksQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinsChicksType"
+            android:layout_marginTop="10dp"
+            android:text="Enter Total Chicks"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtChicksQty"
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_below="@+id/textChicksQty"
+            android:hint="Enter Total Chicks "
+            android:inputType="numberDecimal"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textmortailty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtChicksQty"
+            android:layout_marginTop="15dp"
+            android:text="Enter Tarnsit Mortailty"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtMortalit"
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_below="@+id/textmortailty"
+            android:hint="Enter Tarnsit Mortailty"
+            android:inputType="numberDecimal"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtMortalit"
+            android:layout_marginTop="15dp"
+            android:text="Enter Chicks Rate"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtRate"
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_below="@+id/textrate"
+            android:hint="Enter Rate"
+            android:inputType="numberDecimal"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textSMobno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtRate"
+            android:layout_marginTop="15dp"
+            android:text="MoblileNo"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/textRemarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinsHatchries"
+            android:layout_marginTop="15dp"
+            android:hint="Remarks"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textHatchries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textSMobno"
+            android:layout_marginTop="15dp"
+            android:text="Select Hatchries"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinsHatchries"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textHatchries"
+            android:layout_alignLeft="@+id/textchktype"
+            android:paddingTop="5dp"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnNextDM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textRemarks"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editstyle"
+            android:onClick="SaveDM"
+            android:text="Save Supply..."
+            android:textColor="#0F0F0F" />
+
+        <ImageView
+            android:id="@+id/btnGetSuppDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/dtpSuppDate"
+            android:layout_alignParentRight="true"
+            android:onClick="GetSupplyDate"
+            android:src="@drawable/calender" />
+
+    </RelativeLayout>
+
+</ScrollView>

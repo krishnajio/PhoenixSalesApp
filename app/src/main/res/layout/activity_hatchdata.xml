@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:background="@drawable/img13"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvHatchstrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Enter Hatch Detials"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/tvHatcheryusername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="UserName/Area Code"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20dp"
+                android:layout_gravity="right"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgHatchery_hatchdate"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@id/edtxthatchert_hatchdate"
+                android:src="@drawable/calender"
+                android:textColor="#0F0F0F" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtxthatchert_hatchdate"
+                android:onClick="Gethatchdatehatchery"
+                android:hint="Select Hatch Date"/>
+        </RelativeLayout>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Area Name"
+            android:id="@+id/autoLsthatcheryarealist"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Party/Daealer Name"
+            android:id="@+id/autoLsthatcherypartyname"/>
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Party/Daealer Name"
+            android:paddingTop="10dp"
+            android:id="@+id/spinChicksTypehatchery"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtxthatcherychicksqty"
+            android:hint="Enter Chicks Quantity "/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtxthatcheryboxqty"
+            android:hint="Enter Box Qunatity "/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Vehicle..."
+            android:id="@+id/autoLstvehicle"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Driver Name..."
+            android:id="@+id/autoLstdriver"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSaveBankDepo"
+            android:onClick="SaveHatchData"
+            android:text="SAVE hatch detials"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/listdm"
+    android:scrollbars="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewListdeposite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="List Bank Deposite Data "
+            android:textColor="#0F0F0F"
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tvuserdeposite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewListdeposite"
+            android:layout_alignParentRight="true"
+            android:text="UserName/Area Code"
+            android:textColor="#0F0F0F"
+            android:textSize="12sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textViewdepositeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvuserdeposite"
+            android:layout_marginTop="5dp"
+            android:text="Select Hatch Date:"
+            android:textColor="#0F0F0F"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dtpdepositeDate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textViewdepositeDate"
+            android:editable="false"
+            android:textColor="#0F0F0F"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnGetdepositedate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/dtpdepositeDate"
+            android:layout_alignParentRight="true"
+            android:onClick="GetdepositeDate"
+            android:src="@drawable/calender" />
+
+        <Button
+            android:id="@+id/btnShowdepositeData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dtpdepositeDate"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/editstyle"
+            android:onClick="ShowDepositedata"
+            android:text="Show DM DATA" />
+
+
+        <ListView
+            android:id="@+id/listdeposite"
+            android:layout_width="fill_parent"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/btnShowdepositeData"
+            android:scrollbars="vertical"
+            android:layout_height="500dp" />
+
+    </RelativeLayout>
+</LinearLayout>

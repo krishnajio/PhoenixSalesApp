@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PhoenixSalesApp</string>
+    <string name="title_activity_tr">TrActivity</string>
+    <string name="title_activity_sales_tracking">Map</string>
+</resources>

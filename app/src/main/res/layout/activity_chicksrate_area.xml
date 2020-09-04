@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img3"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Enter Chicks Rate Area Wise"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/tvAC_ChickRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="UserName/Area Code"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20dp"
+            android:layout_gravity="right"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgGetsHatchDateArea"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@id/dtpChickdRateHatchDateArea"
+                android:src="@drawable/calender"
+                android:onClick="HatchDateArea"
+                android:textColor="#0F0F0F" />
+
+            <EditText
+                android:id="@+id/dtpChickdRateHatchDateArea"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:textColor="#0F0F0F"
+                android:hint="Select Hatch Date..."
+                android:textSize="15sp"
+                android:onClick="GetHDAreaRate"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <AutoCompleteTextView
+            android:id="@+id/autoListAreaChickRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Choose Area..."
+            android:layout_marginTop="5dp"
+            android:popupBackground="@color/colorPrimary"
+            android:textColor="#2A2AFF"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/sChicksTypeAreaRate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+             android:textColor="#0F0F0F"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtChickdRateArea"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:textColor="#0F0F0F"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter Chick Rate..."
+            android:inputType="numberDecimal"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnSaveChickRAteArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:onClick="SaveChickRateArea"
+            android:text="Save Chick Rate Area Wise..."
+            android:textColor="#0F0F0F" />
+        <Button
+            android:layout_width="match_parent"
+             android:background="@drawable/editstyle"
+            android:layout_marginTop="5dp"
+            android:text="Show Chick Rate"
+            android:onClick="click1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:id="@+id/lvChickRatreArea"/>
+     </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:alpha="100"
+    android:background="@drawable/img2"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dtpTrDate"
+            android:layout_marginTop="15dp"
+            android:text="Enter TR Amount"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="CREATE TR."
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAreaCode"
+            android:layout_marginTop="-4dp"
+            android:text="Select Customer"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:hint="Choose Customer"
+            android:popupBackground="@color/colorPrimary"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/autoList"
+            android:layout_marginTop="10dp"
+            android:text="TR Number"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtTRno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="1dp"
+            android:editable="false"
+            android:hint="Enter TR Number..."
+            android:textColor="#0F0F0F"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtTRno"
+            android:layout_marginTop="10dp"
+            android:text="Enter TR Date"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dtpTrDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView4"
+            android:editable="false"
+            android:hint="Select Tr Date..."
+            android:textColor="#0F0F0F"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dtpTrDate"
+            android:layout_marginTop="15dp"
+            android:text="Enter TR Amount"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtTrAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_marginTop="0dp"
+            android:hint="Enter TR Amount"
+            android:inputType="numberDecimal"
+            android:textAlignment="gravity"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/TextView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtTrAmt"
+            android:layout_marginTop="7dp"
+            android:text="Enter Paymet Mode"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinPaytype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextView6"
+            android:layout_alignLeft="@+id/TextView6"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="2dp"
+            android:textColor="#0F0F0F" />
+
+        <EditText
+            android:id="@+id/edtxtNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/spinPaytype"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="5dp"
+            android:hint="Chq/DD/Neft/Rtgs No"
+            android:textAlignment="gravity"
+            android:textColor="#0F0F0F"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtBankDetls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinPaytype"
+            android:layout_alignLeft="@+id/spinPaytype"
+            android:layout_marginTop="15dp"
+            android:text="Enter Bank Detials"
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtBankDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtBankDetls"
+            android:hint="Enter Bank Detials..."
+            android:textColor="#0F0F0F"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/edtxtBankDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtBankDetails"
+            android:hint="Enter Bank Deposite Date..."
+            android:textColor="#0F0F0F"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp" />
+
+
+        <TextView
+            android:id="@+id/txtPayType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtBankDate"
+            android:layout_alignLeft="@+id/spinPaytype"
+            android:layout_marginTop="4dp"
+            android:text="Enter Paymentny Type"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinPaymenttype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPayType"
+            android:layout_alignLeft="@+id/txtPayType"
+            android:textColor="#0F0F0F" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinPaymenttype"
+            android:layout_marginTop="15dp"
+            android:textColor="#0F0F0F"
+            android:text="Enter Hatch Date"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dtpHatchdate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextView01"
+            android:layout_alignParentRight="true"
+            android:editable="false"
+            android:textColor="#0F0F0F"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dtpHatchdate"
+            android:layout_marginTop="20dp"
+            android:textColor="#0F0F0F"
+            android:text="Select Chicks Type"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinChicksType"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@+id/textView7"
+            android:layout_alignLeft="@+id/textView7"
+            android:textColor="#0F0F0F" />
+
+        <TextView
+            android:id="@+id/textMobno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinChicksType"
+            android:layout_marginTop="5dp"
+            android:text="MoblileNo"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editRemarks"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editstyle"
+            android:onClick="btnNext"
+            android:text="Next..." />
+
+        <TextView
+            android:id="@+id/tvAreaCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvArea"
+            android:layout_alignParentRight="true"
+            android:text="UserName/Area Code"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/btnGetDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/textView4"
+            android:layout_alignBottom="@+id/dtpTrDate"
+            android:layout_alignParentRight="true"
+            android:onClick="GetTrDate"
+            android:src="@drawable/calender"
+            android:textColor="#0F0F0F" />
+
+        <ImageView
+            android:id="@+id/btnGetHatchDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/dtpHatchdate"
+            android:layout_alignParentRight="true"
+            android:onClick="GetHatchDate"
+            android:src="@drawable/calender" />
+
+        <ImageView
+            android:id="@+id/btnGetBankDate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/edtxtBankDate"
+            android:layout_alignParentRight="true"
+            android:onClick="GetBankDate"
+            android:src="@drawable/calender" />
+
+        <TextView
+            android:id="@+id/textRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textMobno"
+            android:layout_marginTop="2dp"
+            android:text="Enter Chicks Rate:"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textRate"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Chicks Rate"
+            android:textSize="20dp" />
+
+
+        <TextView
+            android:id="@+id/textRemarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editRate"
+            android:layout_marginTop="5dp"
+            android:text="Enter Remarks:"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/editRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textRemarks"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Enter Remarks"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+</ScrollView>

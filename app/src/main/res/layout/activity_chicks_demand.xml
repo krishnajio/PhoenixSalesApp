@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@drawable/demand"
+    android:scrollbars="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewDemand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="ENTER CHICKS DEMAND"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tvuserDemand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewDemand"
+            android:layout_alignParentRight="true"
+            android:text="UserName/Area Code"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textViewSupdateDemand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvuserDemand"
+            android:layout_marginTop="15dp"
+            android:text="Enter Demand Date"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dtpSuppDateDemand"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textViewSupdateDemand"
+            android:editable="false"
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textDemandNO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dtpSuppDateDemand"
+            android:layout_marginTop="15dp"
+            android:text="Enter Demand Number"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtDemandNO"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_below="@+id/textDemandNO"
+            android:editable="false"
+            android:hint="Enter Demand No..."
+            android:textColor="#0F0F0F"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textViewshatchdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtDemandNO"
+            android:layout_marginTop="15dp"
+            android:text="Chicks Demand Hatch Date"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dtpshatchDateDemand"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_below="@+id/textViewshatchdate"
+            android:editable="false"
+            android:onClick="GetHdateSupply"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewCust"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dtpshatchDateDemand"
+            android:layout_marginTop="15dp"
+            android:text="Select Customer"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoListDemand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewCust"
+            android:hint="Choose Customer"
+            android:popupBackground="@color/colorPrimary"
+            android:textColor="#2A2AFF"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnGetsHatchDateDemand"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/dtpshatchDateDemand"
+            android:layout_alignParentRight="true"
+            android:onClick="GetDenadHatchDate"
+            android:src="@drawable/calender"
+            android:textColor="#0F0F0F" />
+
+
+        <TextView
+            android:id="@+id/textchktype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/autoListDemand"
+            android:layout_marginTop="15dp"
+            android:text="Select Chicks Type"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinsChicksTypeDemand"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/textchktype"
+            android:layout_alignLeft="@+id/textchktype"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textChicksQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinsChicksTypeDemand"
+            android:layout_marginTop="10dp"
+            android:text="Enter Quantity of Demand Chicks-1"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtChicksQtyDemand"
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_below="@+id/textChicksQty"
+            android:hint="Demand Chicks Quantity"
+            android:inputType="numberDecimal"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textmortailty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtChicksQtyDemand"
+            android:layout_marginTop="15dp"
+            android:text="Enter Quantity of Demand Chicks-2"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtMortalitDeamnd"
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_below="@+id/textmortailty"
+            android:hint="Demand Chicks Quantity"
+            android:inputType="numberDecimal"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtMortalitDeamnd"
+            android:layout_marginTop="15dp"
+            android:text="Expected Chicks Rate"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtxtRate"
+            android:layout_width="fill_parent"
+            android:layout_height="41dp"
+            android:layout_below="@+id/textrate"
+            android:hint="Expected Rate"
+            android:inputType="numberDecimal"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textSMobno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtxtRate"
+            android:layout_marginTop="15dp"
+            android:text="MoblileNo"
+            android:textColor="#0F0F0F"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/textRemarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textSMobno"
+            android:layout_marginTop="15dp"
+            android:hint="Remarks"
+            android:textColor="#0F0F0F"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSaveDemand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textRemarks"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editstyle"
+            android:onClick="SaveDemand"
+            android:text="Save Chicks Demand..."
+            android:textColor="#0F0F0F" />
+
+        <ImageView
+            android:id="@+id/btnGetSuppDateDemand"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/dtpSuppDateDemand"
+            android:layout_alignParentRight="true"
+            android:onClick="GetDemandDate"
+            android:src="@drawable/calender" />
+    </RelativeLayout>
+
+</ScrollView>
